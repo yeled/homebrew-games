@@ -82,7 +82,7 @@ class Nethack4 < Formula
     mkdir "build"
     cd "build" do
       system "../aimake", "--with=jansson", "--without=gui",
-        "-i", prefix, "--directory-layout=prefix",
+        "-i", prefix, "--directory-layout=fhs_package",
         "--override-directory", "staterootdir=#{var}"
     end
   end
